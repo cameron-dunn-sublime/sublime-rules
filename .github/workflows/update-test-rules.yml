@@ -49,7 +49,8 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         SCRIPT_MODE: 'test-rules'
         # Configure test-rules specific settings
-        FILTER_BY_ORG_MEMBERSHIP: 'true'
+        FILTER_BY_ORG_MEMBERSHIP: 'false'
+        CHECK_ACTION_COMPLETION: 'false'
         ORG_NAME: 'sublime-security'
         INCLUDE_PRS_WITH_COMMENT: 'true'
         COMMENT_TRIGGER: '/update-test-rules'
