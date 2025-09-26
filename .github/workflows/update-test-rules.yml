@@ -93,8 +93,16 @@ jobs:
           exit 0
         fi
         
+        echo "DEBUG ls"
+        ls
+        echo "END DEBUG ls"
+        
         # Get list of modified files
         FILES=$(git status --porcelain detection-rules | awk '{print $2}')
+        
+        echo "DEBUG files"
+        echo "$FILES"
+        echo "END DEBUG files"
         
         # Track stats for the summary
         ADDED_COUNT=0
@@ -119,6 +127,7 @@ jobs:
 
           # Handle removed files
           if [[ ! -f "$FILE" ]]; then
+            echo "$BASENAME was deleted, commiting deletion."
             DELETED_COUNT=$((DELETED_COUNT+1))
             git add "$FILE"
             git commit -m "[PR #${PR_NUMBER}] Delete detection rule"
