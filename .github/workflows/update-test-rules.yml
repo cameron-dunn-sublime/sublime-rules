@@ -52,6 +52,7 @@ jobs:
         FILTER_BY_ORG_MEMBERSHIP: 'false'
         CHECK_ACTION_COMPLETION: 'false'
         ORG_NAME: 'cameron-dunn-sublime'
+        REPO_OWNER: 'cameron-dunn-sublime'
         INCLUDE_PRS_WITH_COMMENT: 'true'
         COMMENT_TRIGGER: '/update-test-rules'
         # SKIP_FILES pattern and labls are managed within the script
