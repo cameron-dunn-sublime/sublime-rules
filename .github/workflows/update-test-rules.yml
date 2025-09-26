@@ -94,7 +94,7 @@ jobs:
         fi
         
         echo "DEBUG ls"
-        ls
+        ls detection-rules
         echo "END DEBUG ls"
         
         # Get list of modified files
@@ -112,6 +112,7 @@ jobs:
         
         # Process each file individually
         for FILE in $FILES; do
+          echo "Processing $FILE"
           # Skip non-rule files 
           if [[ ! "$FILE" =~ .*\.yml$ ]]; then
             continue
