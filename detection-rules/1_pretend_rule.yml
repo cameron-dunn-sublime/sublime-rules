@@ -25,6 +25,8 @@ source: |
   // do not match if the reply_to address has been observed as a reply_to address
   // of a message that has been classified as benign
   and not beta.profile.by_reply_to().any_messages_benign
+  
+  and true
 
 tags:
  - "Attack surface reduction"
@@ -41,4 +43,4 @@ detection_methods:
 id: "6711ab0e-bb09-5eff-88d1-cc1f6b716607"
 og_id: "d12893ba-a65a-5b04-88d1-f35512eae291"
 testing_pr: 1
-testing_sha: 5b37c77d175fd96a3900da2c064cfb8c934bb0a5
+testing_sha: 468f611429002b188c65a1eb718db71b759a5f3d
