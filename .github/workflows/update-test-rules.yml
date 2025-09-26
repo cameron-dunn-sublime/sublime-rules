@@ -135,6 +135,9 @@ jobs:
             continue
           fi
           
+          # Ensure that new files are tracked (otherwise they won't show up in diff)
+          git add -N "$FILE"
+
           # Check if only testing_sha field changed
           DIFF_OUTPUT=$(git diff HEAD -- "$FILE")
 
